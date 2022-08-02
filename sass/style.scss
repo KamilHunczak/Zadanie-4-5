@@ -7,6 +7,7 @@ $color-logo: #fed136;
 $color-font-medium: #777777;
 $color-font-dark: #222222;
 $color-font-light: #ffffff;
+$color-portfolio-background: #eee;
 $font-hand-writing:'Great Vibes', cursive;
 $font-serif:'Lora', serif;
 $font-sans-serif:'Roboto', sans-serif;
@@ -37,6 +38,8 @@ section{
 .section-title{   
     font-size: 2.5rem;
     text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 100px 0 20px;
 }
 .section-subtitle{
     font-family: $font-serif;
@@ -209,6 +212,7 @@ a{
 
 /*portfolio*/
 .portfolio{
+    background-color: $color-portfolio-background;
     .container{
         .portfolio-card{
             .portfolio-card-image{
@@ -223,6 +227,32 @@ a{
                     }
                 }
 
+            }
+        }
+    }
+}
+/*footer*/
+footer{
+    .container{
+        position: relative;
+        .copyright{
+            padding: 20px;
+            font-size: 0.7rem;
+        }
+
+        .socialmedia{
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            text-align: center;
+            font-size: 2rem;
+            padding: 20px;
+            a{
+                color: $color-font-dark;
+                i{
+                    padding: 0 5px;
+                }
             }
         }
     }
