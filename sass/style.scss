@@ -2,3 +2,159 @@
 // font-family: 'Great Vibes', cursive;
 // font-family: 'Lora', serif;
 // font-family: 'Roboto', sans-serif;
+
+$color-logo: #fed136;
+$color-font-medium: #777777;
+$color-font-dark: #222222;
+$color-font-light: #ffffff;
+$font-hand-writing:'Great Vibes', cursive;
+$font-serif:'Lora', serif;
+$font-sans-serif:'Roboto', sans-serif;
+
+/*Global*/
+*::after, 
+*::before,
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+body{
+    height:300vh;
+    font-family: $font-sans-serif;
+}
+
+
+/*splash*/
+.splash{
+    height: 100vh;
+    background-image: url('../images/splash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    top:0;
+    left:0;
+    right:0;
+    &::after{
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .navbar{
+        position: absolute;
+        z-index: 1;
+        top:3vh;
+        left: 0;
+        right: 0;
+        .container{
+            .row{
+                justify-content: space-between;
+                .logo{
+                    letter-spacing: 2px;
+                    font-family: $font-hand-writing;
+                    font-weight: bold;
+                    a{
+                        display: block;
+                        text-align: center;
+                        color: $color-logo;
+                        font-size: 2rem;
+                        width:100%;
+                    }
+                }
+                .menu{
+                    ul{
+                        justify-content: end;
+                        text-transform: uppercase;
+                        li{
+                            list-style: none;
+                            a{
+                                display: block;
+                                color: $color-font-light;
+                                width: 100%;
+                                height: 100%;
+                                text-align: center;
+                                overflow: hidden;
+                                padding: 5px 0;
+                                .fa-solid{
+                                    display: none;
+                                }
+                                span{
+                                    display: inherit;
+                                }
+                                &::after{
+                                    display: block;
+                                    z-index: 1;
+                                    content: "";
+                                    width: 100%;
+                                    height: 2px;
+                                    background-color: #fff;
+                                    position: relative;
+                                    transform: translateX(-150%);
+                                    opacity: 1;
+                                    transition: .3s;
+                                }
+                                &:hover{
+                                    &::after{
+                                        opacity: 1;
+                                        transform: translateX(0) ;
+                                    }
+                                }   
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    .splash-inner{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: $color-font-light;
+        text-align: center;
+        z-index: 1;
+        width: 70%;
+        .splash-inner-title{
+            font-family: $font-serif;
+            text-transform: capitalize;
+            padding: 25px 0;
+            font-size: 2rem;
+        }
+        .splash-inner-subtitle{
+            text-transform: uppercase;
+            padding: 25px 0;
+            font-size: 5rem;
+        }
+        button{
+            background-color: $color-logo;
+            font-weight: bold;
+            padding: 25px 45px;
+            border: none;
+            border-radius: 3%;
+            color: $color-font-light;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            margin-top: 10%;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+
+/*services*/
