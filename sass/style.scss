@@ -250,6 +250,9 @@ footer{
             padding: 20px;
             a{
                 color: $color-font-dark;
+                span{
+                    display: none;
+                }
                 i{
                     padding: 0 5px;
                 }
