@@ -19,12 +19,29 @@ $font-sans-serif:'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
-a{
-    text-decoration: none;
-}
+
 body{
     height:300vh;
     font-family: $font-sans-serif;
+}
+section{
+    margin: 100px auto;
+}
+.section-title,
+.section-subtitle{
+    text-align: center;
+    margin: 20px auto;
+}
+.section-title{   
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+.section-subtitle{
+    font-family: $font-serif;
+    color: $color-font-medium;
+}
+a{
+    text-decoration: none;
 }
 
 
@@ -158,3 +175,32 @@ body{
 
 
 /*services*/
+.services{
+    .container{
+        .service{
+             text-align: center;
+             padding: 0 50px;
+             .service-logo{
+                margin: 100px auto;
+                border:5px solid $color-logo;
+                border-radius: 50%;
+                height: 150px;
+                width: 150px;
+                color: $color-logo;
+                font-size: 70px;
+                line-height: 150px;
+             }
+             .service-title{
+                margin-top:20px;
+             }
+             .service-description{
+                padding: 10%;
+                color:$color-font-medium;
+                font-family:$font-serif;
+             }
+
+        }
+    }
+}
+
+/*portfolio*/
