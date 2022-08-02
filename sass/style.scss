@@ -28,9 +28,11 @@ section{
     margin: 100px auto;
 }
 .section-title,
-.section-subtitle{
+.section-subtitle,
+.card-description,
+.card-title{
     text-align: center;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 .section-title{   
     font-size: 2.5rem;
@@ -40,6 +42,17 @@ section{
     font-family: $font-serif;
     color: $color-font-medium;
 }
+.card-title{
+    margin-top:20px;
+    text-transform: capitalize;
+ }
+ .card-description{
+    padding: 20px;
+    color:$color-font-medium;
+    font-family:$font-serif;
+    text-transform: capitalize;
+ }
+
 a{
     text-decoration: none;
 }
@@ -178,7 +191,6 @@ a{
 .services{
     .container{
         .service{
-             text-align: center;
              padding: 0 50px;
              .service-logo{
                 margin: 100px auto;
@@ -189,18 +201,29 @@ a{
                 color: $color-logo;
                 font-size: 70px;
                 line-height: 150px;
+                text-align: center;
              }
-             .service-title{
-                margin-top:20px;
-             }
-             .service-description{
-                padding: 10%;
-                color:$color-font-medium;
-                font-family:$font-serif;
-             }
-
         }
     }
 }
 
 /*portfolio*/
+.portfolio{
+    .container{
+        .portfolio-card{
+            .portfolio-card-image{
+                margin: 40px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 0.4s;
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+
+            }
+        }
+    }
+}
